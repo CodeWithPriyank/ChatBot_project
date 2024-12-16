@@ -1,0 +1,14 @@
+step 1 - run this command to create project directory and necessary files
+"django-admin startproject project_name"
+
+step- 2 - run this command to create app in the django project
+"python manage.py startapp app_name"
+
+step 3 - to connect new app that we created inroder to work with we have to link with the project follow this:
+* go into proect_name/settings.py and 
+* INSTALLED_APPS = [
+    'app_name.apps.BaseConfig',
+]
+
+step 4 - to connect app urls create urls.py file in app_name folder
+
