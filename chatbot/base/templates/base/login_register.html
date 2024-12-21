@@ -3,7 +3,7 @@
 {% block content %}
 
 
-{% comment %} {% if page == 'login' %} {% endcomment %}
+{% if page == 'login' %}
 <div>
     <form method="POST" action="">
         {% csrf_token %}
@@ -18,11 +18,11 @@
     </form>
 
     <p>havent signed up yet?</p>
-    {% comment %} <a href="{% url 'register' %}">Sign up</a> {% endcomment %}
+    <a href="{% url 'register' %}">Sign up</a>
 </div>
 
-{% comment %} {% else %} {% endcomment %}
-{% comment %} 
+{% else %}
+
 <div>
     <form method="POST" action="">
         {% csrf_token %}
@@ -32,6 +32,6 @@
     <p>Already signed up yet?</p>
     <a href="{% url 'login' %}">Login</a>
 </div>
-{% endif %} {% endcomment %}
+{% endif %} 
 
 {% endblock content %}
